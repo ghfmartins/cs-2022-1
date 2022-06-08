@@ -133,27 +133,9 @@ Após a execução destes dois comandos o que acontecerá é que o último commi
   Irá mudar para a última versão do arquivo a.txt comitada.
 
 34. Qual a diferença entre os comandos **git reset HEAD a.txt** e **git checkout -- a.txt**?
-  
+  git reset HEAD a.txt vai fazer com que o arquivos editados que foram adicionados para o stage fiquem untracked. Já o git checkout -- a.txt vai fazer a modificação no arquivo seja descartada.
 
 
 35. Veja como interpretar o resultado de git diff [aqui](https://medium.com/therobinkim/how-to-read-a-git-diff-6c87a9dc47c5). Execute, em um dos seus projetos, o comando **git diff HEAD~1 HEAD** e certifique-se de que entende o resultado apresentado.
-
-
-
-INSTRUÇÕES:
-
-1. No seu repositório pessoal, criar a pasta aula04.
-2. Commitar este arquivo respondido nesta pasta.
-3. A data limite para concluir esta tarefa é dia 07/06/2021, as 23h59min.
-
-
-
-
-
-
-
-
-
-
 
 </DIV/>

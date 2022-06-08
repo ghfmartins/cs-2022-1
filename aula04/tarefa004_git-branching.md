@@ -10,7 +10,7 @@
     git checkout -b BRANCH_NAME COMMIT_ID
 
 4. Em um repositório, qual o efeito do comando **<code>git checkout -b bugfix/234</code>**?
-    Cria uma branch bugfix/234 e muda o diretório de trabalho para essa nova branch.
+    Cria uma branch 234 no remote bugfix e aponta para essa nova branch.
 
 5. Qual o comando para se alternar para um branch de nome **experimento2**?
     git checkout expermimento2
