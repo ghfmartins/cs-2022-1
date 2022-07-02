@@ -1,0 +1,7 @@
+package org.example1;
+
+public class Cavalo extends Animal {
+    public Cavalo(String nome, int idade) {
+        super(nome, idade, "relincha", "corre");
+    }
+}
