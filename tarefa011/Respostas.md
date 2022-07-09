@@ -45,3 +45,25 @@ A saída no console será:
 ----
 ## Programação Defensiva
 
+Programação defensiva refere-se a um conjunto de práticas que garantem que o código saiba gerenciar situações não esperadas, garantindo a disponibilidade do sistema, a integridade dos dados e a saúde da aplicação (e seus envolvidos). É esperado que todo sistema construído é utilizado por alguém. Este alguém pode ser uma pessoa ou um código de terceiro. Toda aplicação possui métodos e classes públicos, destinados a se comunicarem com o mundo externo, portanto, estes são as portas de entrada para seu código, e estão lidando com território desconhecido. Uma maneira inteligente de garantir que o fluxo esperado dos dados seja seguido é validar qualquer dado que seja enviado pelas fontes externas, criando uma barreira de proteção.
+
+> "Nunca confie nos dados inseridos pelo usuário"
+
+Assim, sempre que a sua aplicação recebe dados de uma fonte externa é de extrema importância validar a entrada que chegou, e quando se deparar com valores invalidos, algumas abordagens podem ser utilizadas, como por exemplo, converter para o valor válido mais próximo; retornar um valor padrão para a operação; retornar um código de erro ou simplesmente finalizar a aplicação. Testes também são importantes ferramentas para garantir uma programação mais defensiva. Testes completos por testadores profissionais permitem que um desenvolvedor tenha centenas de horas de uso do produto para encontrar erros antes que o software seja lançado.
+
+Agindo assim, garantiremos que o sistema saiba tratar valores inválidos que ele pode receber eventualmente, validando a integridade dos dados e que os comportamentos inesperados sejam evitados.
+
+Como exemplo podemos citar a seguinte situação. Caso você esteja implementando um cadastro de usuário e precisa validar de o email e o cpf informados são realmente válidos. Nessa situação, podemos criar métodos que validam as regras para um e-mail e um cpf válidos e sempre verificarmos esses dados, gerando um erro caso eles não atendam a estas condições
+```
+public class Usuário {
+  public void cadastrarUsuarios(string name, string email, string cpf) {
+    if (!ValidateEmail(email))
+      throw new ArgumentException("Email invalido!");
+      
+    if (!ValidateCpf(cpf))
+      throw new ArgumentException("CPF invalido!");
+      
+    // ...
+  }
+}
+``` 
